@@ -98,7 +98,7 @@ export function MessageItem({
   const metaColor = role === 'assistant' ? 'text-gray-200' : 'text-gray-500'
   return (
     <div className={`flex items-start gap-2 ${rowClass}`}>
-      <Avatar title={who} side={role === 'user' ? 'right' : 'left'} />
+      <Avatar title={who} />
       <div className={bubbleClass}>
         <div className={`mb-2 flex items-center justify-between text-xs ${metaColor}`}>
           <span>{who}</span>

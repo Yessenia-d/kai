@@ -10,9 +10,9 @@ export function useRecorder() {
   const timerRef = useRef<number | null>(null)
 
   useEffect(() => {
-    if (typeof navigator !== 'undefined' && navigator.mediaDevices?.getUserMedia) {
-      navigator.permissions?.query({ name: 'microphone' as any }).then((p) => setPermission(p.state as any)).catch(() => {})
-    }
+    // if (typeof navigator !== 'undefined' && navigator.mediaDevices?.getUserMedia) {
+    navigator.permissions?.query({ name: 'microphone' as any }).then((p) => setPermission(p.state as any)).catch(() => { })
+    // }
   }, [])
 
   async function start() {

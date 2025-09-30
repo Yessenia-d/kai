@@ -89,13 +89,18 @@ export const PLAYBACK_RATE_MAP = {
   [PlaybackRate.ONE_HALF]: '1.5',
 }
 
+// Helper function to get typed object entries
+function objectEntries<K extends string, V>(obj: Record<K, V>): Array<[K, V]> {
+  return Object.entries(obj) as Array<[K, V]>;
+}
+
 // Select options configurations
 export const SELECT_OPTIONS = {
-  models: Object.entries(MODEL_MAP).map(([value, label]) => ({ value, label })),
-  analysisProviders: Object.entries(ANALYSIS_PROVIDER_MAP).map(([value, label]) => ({ value, label })),
-  ttsVoices: Object.entries(TTS_VOICE_MAP).map(([value, label]) => ({ value, label })),
-  ttsProviders: Object.entries(TTS_PROVIDER_MAP).map(([value, label]) => ({ value, label })),
-  accents: Object.entries(ACCENT_MAP).map(([value, label]) => ({ value, label })),
-  playbackRates: Object.entries(PLAYBACK_RATE_MAP).map(([value, label]) => ({ value, label })),
+  models: objectEntries(MODEL_MAP).map(([value, label]) => ({ value, label })),
+  analysisProviders: objectEntries(ANALYSIS_PROVIDER_MAP).map(([value, label]) => ({ value, label })),
+  ttsVoices: objectEntries(TTS_VOICE_MAP).map(([value, label]) => ({ value, label })),
+  ttsProviders: objectEntries(TTS_PROVIDER_MAP).map(([value, label]) => ({ value, label })),
+  accents: objectEntries(ACCENT_MAP).map(([value, label]) => ({ value, label })),
+  playbackRates: objectEntries(PLAYBACK_RATE_MAP).map(([value, label]) => ({ value, label })),
 }
 
