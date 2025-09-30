@@ -1,0 +1,11 @@
+node_modules
+.next
+.turbo
+.vercel
+dist
+.DS_Store
+*.log
+apps/web/.env.local
+apps/web/.env
+apps/web/.env.*
+

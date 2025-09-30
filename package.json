@@ -1,0 +1,19 @@
+{
+  "name": "kai",
+  "private": true,
+  "packageManager": "pnpm@9.0.0",
+  "scripts": {
+    "dev": "turbo run dev --filter=@kai/web",
+    "build": "turbo run build --filter=@kai/web",
+    "lint": "turbo run lint",
+    "test": "turbo run test"
+  },
+  "devDependencies": {
+    "turbo": "^2.0.6"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}
+
